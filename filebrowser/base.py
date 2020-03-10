@@ -287,7 +287,7 @@ class FileObject():
         "Modified time (from site.storage) as float (mktime)"
         if self.exists:
             return time.mktime(get_modified_time(self.site.storage, self.path).timetuple())
-        return None
+        return 0.0
 
     @property
     def datetime(self):

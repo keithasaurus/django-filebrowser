@@ -322,8 +322,12 @@ class FileBrowserSite(object):
                 append = False
             # always show folders with popups
             # otherwise, one is not able to select/filter files within subfolders
-            if fileobject.filetype == "Folder":
-                append = True
+            #
+            # KP: disabling! will need to re-enable if want recursive
+            # searches (apparently)
+            
+            # if fileobject.filetype == "Folder":
+            #     append = True
             # append
             if append:
                 files.append(fileobject)
